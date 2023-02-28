@@ -1,0 +1,130 @@
+@charset "utf-8";
+        * {margin: 0;}
+        ul, ol, li {list-style:none;}
+        a {text-decoration: none;}
+
+        header {width:1100px; height: 220px;  margin: 0 auto;}
+        #login {width: 500px; height: 40px;  margin:10px 0 0 5px; float: left;}
+        #login > ul > li {float: left; margin: 10px 5px 0 5px; font-size: 12px;}
+        #login > ul > li > a {text-decoration: none; color: #666; }
+        #login > ul > li > a:hover {cursor: pointer; }
+
+        #community {width:320px; height: 40px; margin:10px 10px 0 5px;  float: right;}
+        #community > ul > li {float: left; margin: 10px 5px 0 0px; font-size: 12px;}
+        #community > ul > li > a {text-decoration: none; color: #666; margin: 15px 10px 0 10px;}
+        #community > ul > li > a:hover {cursor: pointer; }
+        #community > ul > li > a > img {width: 30px; height: 30px; margin: -5px;}
+
+        #top_img {width: 280px; height: 140px;  float: left; margin: 20px 20px 20px 20px;}
+        #top_img > a > img {width: 100%; height: 100%;}
+
+        #logo {width: 400px; height: 160px;  float: left; margin: 0px 20px 20px 50px;}
+        #logo > a > img {width: 100%; height: 100%;} 
+
+        fieldset {float: right; background-color: bisque; width: 200px; height: 20px; border-radius: 15px; border: none; opacity: 0.6; margin: 80px 10px 0 10px;}
+        fieldset > input {background-color:bisque; border: none; height: 17px;width: 170px;}
+        fieldset > img {width:20px; height: 20px;}
+
+        #catalog {width: 100%; height: 50px; background-color: rgb(242, 241, 241); margin: 10px 0 0 0;}
+        #catalog > ul { width: 1100px; height: 50px; margin: 0 auto;}
+        #catalog > ul > li {float:left; font-size: 15px; text-align: center; margin:  15px 15px 5px 30px;}
+        #catalog > ul > li > a {text-decoration: none; color: #555; font-weight: bold;
+        margin:5px 10px 5px 10px;}
+        #catalog > ul > li > a:hover {cursor:pointer; color: red;}
+
+
+
+        #slider {width:1200px; height: 500px; background-color: bisque; margin: 0 auto;}
+        #slider > img {width: 100%; height: 100%; background-size: cover;}
+
+
+        #main_item {width:1100px; height: 1300px;  margin: 0 auto;}
+        #uns {width: 1100px; height: 300px; }
+        .underslider {width: 310px; height: 210px; background-color: blueviolet; float: left; margin: 40px 10px 20px 35px;}
+        .underslider > a > img {width: 100%; height: 100%;}
+
+        #choice {width: 1100px; height: 1000px; float: left;}
+        #choice > h3 {text-transform: uppercase; color: #303360; text-align: center; margin: 40px 0 0 10px; font-size: 30px;}
+        #choice > p {text-align: center; margin: 10px 0 0 10px; font-size: 14px; color: #666;}
+        #choice > ul {width: 1100px; height: 45px; margin: 10px auto;}
+        #choice > ul > li {background-color: white; width: 100px; height: 35px; float: left; margin: 10px 30px 0px 65px; padding: 10px 15px 15px 25px; 
+            box-sizing: border-box;font-size: 12px; border: 1px solid #d4cece; border-radius: 10px;}
+        #choice > ul > li:hover {cursor: pointer;}
+
+        .box {width:225px; height:320px; border:1px solid #eee; padding:10px; margin:20px 5px 10px 15px;  display:inline-block; box-shadow: 4px 4px 4px #e3e2f3;}
+        .box img {width:100%; height:225px;}
+        .box p { font-size:12px;font-weight:bold; height:25px;}
+        .box p a {color:#333;}
+        .c2 {border-top:1px solid #eee; font-size:12px; color:#000; display:block; font-weight:bold;}
+        .c3 {font-size: 14px; display: block; font-weight: bold;}
+        .btn1 {border:1px solid #ddd; color:tomato; padding:1px 5px 2px; font-size:10px; display:block; width:50px; margin:10px 0 0 0;}
+
+        .box1 {width:225px; height:340px; border:1px solid #eee; padding:10px; margin:20px 5px 10px 15px;  display:inline-block; box-shadow:4px 4px 4px #e3e2f3;}
+        .box1 img {width:100%; height:225px;}
+        .box1 p { font-size:12px;font-weight:bold; height:25px;}
+        .box1 p a {color:#333;}
+        .co2 {border-top:1px solid #eee; font-size:12px; color:#666; display:block; font-weight:bold;}
+        .co3 {font-size: 14px; display: block; font-weight: bold; color:#444;}
+        .btn2 {border:1px solid #888; color:tomato; padding:1px 5px 2px; font-size:10px; display:block; width:50px; margin:10px 0 0 0;}
+
+
+        #main_img {width:1100px; height:750px;  margin: 0 auto;}
+        .big_img1 {width: 530px; height: 400px;  float: left; margin: 20px;}
+        .big_img1 > a > img {width: 100%; height: 100%;}
+        .small_img1 {width:234px; height: 250px;  float: right; margin: 20px 17px 0 15px;}
+        .small_img1 > a > img {width: 100%; height: 100%;}
+        .small_img2 {width: 234px; height: 250px;  float: right; margin: 20px 15px 0 15px;}
+        .small_img2 > a > img {width: 100%; height: 100%;}
+        .middle_img {width:530px; height:250px; ; float: right; margin: 0 20px 0 10px;}
+        .middle_img > a > img {width: 100%; height: 100%;}
+        .big_img2 { background-image: url(../img/woden.jpg);
+        background-position: right bottom; background-size: cover;
+        background-repeat: no-repeat; width: 500px; height: 400px;  float: right; margin: 20px 15px 0 15px;}
+        .big_img2 > h3 {font-size: 23px; color: #402606; margin: 15px; text-align: right;}
+        .big_img2 > p {font-size: 14px; color: #3c3838; margin: 15px; text-align: right;}
+
+
+        #weekly_best {width: 1100px; height: 1000px; margin: 0 auto;}
+        #weekly_best_sub > h3 {text-transform: uppercase; text-align: center; color: #8d5710; margin: 30px 0 0 10px; font-size: 30px;}
+        #weekly_best_sub > p {text-align: center; margin: 10px 0 0 10px; font-size: 14px; color: #888;}
+        
+        #new_arrivals {width: 1200px; height: 300px;  margin: 0 auto;}
+        #new_arrivals > a > img {width:100%; height: 100%;}
+        
+
+
+        footer {width:100%; height: 700px;  margin: 0 auto; float: left;}
+        #infoot {width:1100px; height: 270px;  margin: 0 auto;}
+        
+        #customoer_center {width:330px; height: 270px;  margin: 20px; float: left; display: block; }
+        #customoer_center > hr {width:290px; margin: 0 auto; color: gainsboro; }
+        #customoer_center > p {font-size: 12px; padding: 5px; margin: 10px; color: #666;}
+        #customoer_center > h4 {font-size: 20px; padding: 5px; margin: 10px; color: #555; } 
+        #customoer_center > h2 {font-size: 25px ; padding: 5px; margin: 10px; color: #555; }
+        .cs_menu {width: 130px; height: 40px; background-color: #000; float: left; margin: 10px 15px 10px 15px; box-sizing: border-box;}
+        .cs_menu > a {color: #fff; text-align: center; display: block; margin: 10px; font-size: 14px;}
+
+
+
+        #other_infor {width:320px; height: 270px;  margin: 20px; float: left; display: block; }
+        #other_infor > hr {width:290px; margin: 0 auto; }
+        #other_infor > p {font-size: 12px; padding: 5px; margin: 10px; color: #666;}
+        #other_infor > h4 {font-size: 20px; padding: 5px; margin: 10px; color: #555; }
+        .don {color:#666;width: 300px; height: 50px; background-color:rgba(220, 220, 220, 0.7); margin: 10px; font-size: 13px;}
+
+        #personal_icon {width:320px; height: 270px;  margin: 10px; float: left; display: block;}
+        .icon {width: 80px; height: 70px;  float: left; margin: 15px 5px 0 10px; }
+        .icon > a > img {width: 50%; height: 40px; opacity: 0.8; margin: 0 5px 5px 15px ;}
+        .icon > span {text-align: center; display: block; font-size: 12px;} 
+        .icon > span > a {color: #666;}
+        
+        footer > #Inquiry  {float: left; border: 1px solid rgb(215, 209, 209); width: 100%; height: 40px; margin: 0 auto;}
+        
+        #Inquiry > ul {width: 1100px; height: 40px; ; margin: 0 auto;}
+        #Inquiry > ul > li {float: left; margin: 13px 5px 5px 0 ; font-size: 11px;}
+        #Inquiry > ul > li > a {color: #666; }
+        #Inquiry > ul > li > a:hover { cursor: pointer;}
+
+        #about_com  {width: 1100px; height: 70px; ; margin: 0 auto;}
+        #about_com > p {float: left; margin: 10px 5px 5px 20px ; font-size: 11px; color: #666; line-height: 14px;}
+        #about_com > .escro_img {float: right; width: 200px; height: 50px; margin:20px 5px 5px 50px; display: block;}

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        #sub {width:1100px; height:750px; margin: 0 auto;}
+        
+        
+        #submenu {width: 1100px; height: 40px; margin: 0 auto; }
+        #submenu > ul {float: right; margin: 10px 40px 10px 0;}
+        #submenu > ul > li {float: left; font-size: 14px; margin: 0 5px 0 5px;}
+        #submenu > ul > li > a {color: #666;}
+
+        #sub_mainimg {width: 500px; height: 500px; float: left; margin: 0px 10px 10px 5px;}
+        #sub_mainimg > img {width: 100%; height: 100%;}
+
+        #subtext {width: 550px; height: 700px; float: right; margin: 0 5px 10px 10px; }
+        .subtitle {width: 520px; height: 55px;  margin: 5px auto; border-top: 1px solid #666;}
+        .subtitle > h3 {font-size: 20px; padding: 10px 0 10px 25px; text-align: left;}
+        .subtitle > p {font-size: 16px; padding: 10px 0 10px; margin: 0 0 0 25px;} 
+        .subtitle > h4 > strike {color: #666;}
+
+        .areagold {width: 520px; height: 55px; margin: 5px auto; border-top: 1px solid #666;}
+        .areagold th {width:120px; font-size: 14px; margin: 10px 5px 5px -17px; 
+            display: inline-block; color: #555;}
+        .areagold td {font-size: 12px; display: inline-block; margin: 10px 5px 5px 0;
+        color: #666;}
+
+        .choicecolor {width: 520px; height: 80px; margin: 5px auto; border-top: 1px solid #666; border-bottom: 1px solid #666; }
+        
+        .choicecolor th {width:70px; font-size: 14px; margin: 30px 5px 5px 0px; 
+            display: block; color: #555; }
+
+        .choicecolor td {font-size: 12px;  margin: 10px 5px 5px 0;
+        color: #666;}
+        .choicecolor td > p {margin: 15px 5px 5px 30px;}
+        .choicecolor td > ul > li {width: 85px; height: 30px; background-color:rgb(245, 245, 245); float: left; 
+            margin: 10px 5px 0 0px; border-radius: 7px; border: 1px solid #888; text-align: center; padding: 5px; box-sizing: border-box;}
+        .choicecolor td > ul > li > a {color: #444;}
+        
+        
+        .selected {width: 520px; height: 80px; margin: 5px auto; border-top: 1px solid #444; border-bottom: 1px solid #666;}
+        .selected th {font-size: 12px; color: #666; font-weight: normal;  box-sizing: border-box;}
+        
+        .selected th:first-child {width: 250px; border-right:1px solid #666; text-align: left;  padding:1px 1px 3px 20px;}
+        .selected th:nth-child(2) {width: 120px; text-align: center; border-right:1px solid #666; }
+        .selected th:last-child {width: 130px; text-align: right; }
+
+        .many {border-top:1px solid #666; text-align: right; font-size: 12px;}
+        .many > span > b {font-size: 16px;}
+        .many > span {margin: 10px 0 0 0; border-bottom:1px solid #666 ; display: block; padding: 0 10px 0 10px;}
+        .many > p {font-size: 12px; margin: 5px 10px 10px 0;}
+        
+        
+        .payment_button {width: 520px; height: 310px;
+            margin: 15px auto;}
+
+        .purchase_button {width: 520px; height: 65px; }
+        .purchase_button > a {width: 160px; height: 50px; border-radius: 5px;}
+        .purchase_button > a > span {margin: 15px 0 0 0; display: block;}
+        
+        .Buy_button { margin: 5px 0 5px 8px; background-color: rgb(12, 12, 12); display: inline-block; 
+            text-align: center; color: white; font-weight: bold;}
+        
+        .button_basket { margin: 5px 0 5px 8px; background-color: whitesmoke; display: inline-block; 
+            text-align: center; color: black; font-weight: bold;}
+
+        .button_interest { margin: 5px 0 5px 8px; background-color: whitesmoke; display: inline-block; 
+            text-align: center; color: black; font-weight: bold;}
+
+        .talk_button {width: 520px; height: 120px; margin: 5px 0 5px 0;}
+
+        
+        .talk_button > a > img {width: 30px; height: 30px;} 
+        .talk_button > a > span {width: 100px; height: 30px;}
+
+        .Navertalk {  text-align: center; 
+        background-color: #35ba26; margin: 10px 5px 5px 10px; 
+        width: 500px; height: 55px; display: block; border-radius: 5px;}
+        .Navertalk > img {vertical-align: bottom; margin: 10px 0 0 0;}
+        .Navertalk > span {color: whitesmoke;}
+        
+
+        .Kakaotalk { text-align: center; 
+        background-color: #F7E600; margin: 10px 5px 5px 10px; 
+        width: 500px; height: 55px; display: block; border-radius: 5px;}
+        .Kakaotalk > img {width: 30px; height: 30px; vertical-align: bottom; margin: 10px 0 0 0;}
+        .Kakaotalk > span {color: whitesmoke; color: black; font-weight: 700;}
+
+        .Nchk_button {margin:5px 0 0 0; width: 400px;height: 90px; float:right; margin: 0 10px 5px 0;
+        border-top: 2px solid black; }
+        .Npay {width: 130px;height: 60px;  float: left; margin: 0 5px 0 0;}
+        .Npay > img {margin:5px 0 0 0; width: 100%; height: 100%;}
+
+        .Npay_use {margin:5px 0 0 0; width: 200px; height: 60px; background-color: rgb(44, 194, 44); float: left;}
+        .Npay_use > img {width: 40px; height: 40px; vertical-align: middle; margin: 10px 0 10px 5px;}
+        .Npay_use > span {font-size: 17px; color: whitesmoke; margin: 0 0 0 5px; font-weight: 550;}
+
+        .Own {margin:5px 0 0 0; width: 60px; ; height: 60px; background-color: whitesmoke; float: right; border: 1px solid #999;} 
+        .Own > span {font-size: 17px; font-family: 돋움; color: #35ba26; font-weight: bold;
+        display: block; margin: 20px 25px 25px 20px;}
+        .sub_subimg {width: 160px; height: 160px; background-color: aqua; 
+            float: left; margin: 10px 5px 10px 5px;}
+        .sub_subimg > a > img {width: 100%; height: 100%;}
+
+    #detail_infor {margin: 0 auto; width: 1100px; height: auto;}
+    #detail_infor > img {margin: 0 auto; display: block;}
+
+    #prdInfo {width: 1100px; height: 900px; margin: 0 auto;}
+    .content {width: 1100px; height: 200px; margin: 15px 0 5px 0;}
+    .content > h3 {border-bottom: 1px solid #c8c7c7; font-size: 15px; line-height: 40px;}
+    .content > p {margin: 5px 0 0 35px; font-size: 12px;}
+    .content > ul > li {margin: 5px 0 0 0; font-size: 12px; line-height: 13px;}
+
+    .exchange > p {font-size: 12px; line-height: 15px; margin: 5px 0 0 35px; font-size: 12px;}
+    .exchange > h3 {border-bottom: 1px solid #c8c7c7; font-size: 15px; line-height: 40px;}
+
+    #prdReview {width: 1100px; height: 600px;  margin: 0 auto;}
+    #prdReview > span {display: block;}
+
+    .itemreview {text-transform: uppercase; font-size: 18px; font-weight: bold; margin: 10px 0 5px 10px; }
+    .warn {font-size: 14px; margin:  0 0 10px 10px;}
+    .customers_rev {width: 350px; height: 500px;  margin: 5px; float: left;
+    }
+    .hihi {width: 290px; height: 450px; margin:10px auto; border-radius: 10px; overflow: hidden;
+    border: 1px solid #888; box-shadow: 4px 4px 4px #ddd8d8;}
+    .review_photo {width: 290px; height: 300px;}
+    .review_photo > a > img {width: 100%; height: 100%;}
+    .review_coment {width: 290px; height: 170px; margin: 0px auto; }
+    .review_title {width: 260px; height: 100px; margin: 0 auto;}
+    .user_title {font-size: 12px; font-weight: 600;}
+    .review_title > p {font-size: 11px; font-weight: 400; padding: 10px; line-height: 20px;}
+    .review_sub {width: 260px; height: 50px; margin: 0 auto;
+    border-top:1.5px solid #999; border-top-style: dotted;}
+    .user_Id {float: right;}
+    .review_sub > span {font-size: 10px;}
+    .review_sub > span > a {text-decoration: none; color: #000;} 
+    .review_sub > a > img {width: 30px; height: 30px; vertical-align: sub; border-radius: 50%;}
+
+    #user_review ul {width: 1100px; height: 50px; margin: 40px 0 0 -35px;}
+    #user_review ul > li {width:270px; height:100%; background-color:#eee; 
+        float:left; text-align:center; padding:15px 0 0 0px; border:1px solid #ddd;
+        border-bottom:1px solid #000; font-size:14px;}
+
+    #user_review {width: 1100px; height: 400px; margin: 40px auto 0;}
+    #review  > ul > li:nth-child(3) {background-color:#fff; border:1px solid #000; border-bottom:none;}
+    #review_tablebox > button {float:right; margin:25px 0px; width:120px; height:30px; color:#fff; font-size:12px; background-color:#333; border:1px solid #ddd;}
+    #review_tablebox > button:hover {cursor:pointer;}
+    #review_tablebox > table {display:inline-block; margin:0px auto; border-top:1px solid #333; line-height:50px; width:1100px; font-size:13px; color:#333;}
+
+    #user_review ul > li > a {color: #000;}
+    #review_tablebox  table th {width:80px; border-bottom:1px solid #eaeaea; color:#666}
+
+    #review_tablebox  table td:first-of-type {width:770px; border-bottom:1px solid #eee;}
+    #review_tablebox  table td:first-of-type > a {color:#333;}
+    #review_tablebox  table td:nth-of-type(2) {width:80px; text-align:center; border-bottom:1px solid #eee;}
+    #review_tablebox  table td:nth-of-type(3) {width:120px; text-align:center; border-bottom:1px solid #eee;}
+    #review_tablebox table td:last-of-type {width:150px; text-align:center; border-bottom:1px solid #eee;}
+
+    </style>
+    
+</head>
+<body>
+
+
+    <header>
+        <div id="login">
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li>|</li>
+                <li><a href="#">회원가입</a></li>
+                <li>|</li>
+                <li><a href="#">장바구니</a></li>
+                <li>|</li>
+                <li><a href="#">주문조회</a></li>
+                <li>|</li>
+                <li><a href="#">마이페이지</a></li>
+            </ul>
+        </div>
+
+        <div id="community">
+            <ul>
+                <li><a href="#">포토리뷰</a></li>
+                <li>|</li>
+                <li><a href="#">커뮤니티</a></li>
+                <li>|</li>
+                <li><a href="#"><img src="img/cam.jpg" alt="camera"></a></li>
+            </ul>
+
+        </div>
+
+        <div id="top_img">
+            <a href="#"><img src="img/top_img.jpg" alt="sofa"></a>
+        </div>
+
+        <div id="logo">
+            <a href="#"><img src="img/logo7.jpg" alt="logo"></a>
+        </div>
+
+        <fieldset>
+            <input type="text">
+            <img src="img/search.jpg" alt="search_tool">
+        </fieldset>
+
+
+
+        
+    </header>
+    <div id="catalog">
+        <ul>
+            <li><a href="#">전체상품</a></li>
+            <li><a href="#">침실가구</a></li>
+            <li><a href="#">거실가구</a></li>
+            <li><a href="#">주방가구</a></li>
+            <li><a href="#">수납가구</a></li>
+            <li><a href="#">학생/서재가구</a></li>
+            <li><a href="#">개인결제</a></li>
+            <li><a href="#">추가메뉴</a></li>
+        </ul>
+    </div>
+
+<!-- 상품결제 -->
+
+    <div id="sub">
+        <div id="submenu">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li> > </li>
+                <li><a href="#">수납가구</a></li>
+                <li> > </li>
+                <li><a href="#"> 신발장</a></li>
+            </ul>
+        </div>
+
+        <div id="sub_mainimg"><img src="img/doorshoes.jpg" alt=""></div>
+
+        <div id="subtext">
+            <div class="subtitle">
+                <h3>모크 400 도어 신발장세트(상하부장) HPF021_C</h3>
+            </div>
+
+            <div class="subtitle">
+                <p><strike>153,000원</strike> 79.000원</p>
+            </div>
+
+            <div class="areagold">
+                <table>
+                    <tr>
+                        <th>배송비</th>
+                        <td><span>서울/경기 22,000원 │ 경기 외곽 22,000원 │ 지방 28,000원</span></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="choicecolor">
+                <table>
+                    <th>색상</th>
+                    <td>
+                        <ul>
+                            <li><a href="#">오크화이트</a></li>
+                            <li><a href="#">오크그레이</a></li>
+                            <li><a href="#">화이트그레이</a></li>
+                            <li><a href="#">화이트</a></li>
+                        </ul> <br><br>
+                        <p>[필수] 옵션을 선택해 주세요</p>
+                    </td>
+                </table>
+            </div>
+
+            <div class="selected">
+                <table>
+                    <tr>
+                        <th class="name">상품명</th>
+                        <th>수량</th>
+                        <th>가격</th>
+                    </tr>
+                    
+                </table>
+                <div class="many">
+                    <span><b>0원</b> (0개)</span>
+                    
+                    <p>( 최소주문수량 1개 이상 )</p>
+                </div>
+            </div>
+
+            <div class="payment_button">
+                <div class="purchase_button">
+                    <a href="#" class="Buy_button"><span>바로구매</span></a>
+                    <a href="#" class="button_basket"><span>장바구니</span></a>
+                    <a href="#" class="button_interest"><span>관심상품</span></a>
+                </div>
+
+                <div class="talk_button">
+                    <a href="#"><div class="Navertalk"><img src="img/navertalkicon.jpg" alt="icon"> <span>궁금할땐 네이버톡톡 하세요!</span></div> </a>
+                    <a href="#"><div class="Kakaotalk"><img src="img/kakao.jpg" alt="icon"><span>카카오톡</span></div></a>
+                </div>
+                
+                <div class="Nchk_button">
+                    <a href="#"><div class="Npay"><img src="img/Npay.JPG" alt=""></div></a>
+                    <a href="#"><div class="Npay_use"><img src="img/naverlogo.jpg" alt=""><span>Pay 구매</span></div></a>
+                    <a href="#"><div class="Own"><span>찜</span></div></a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="sub_subimg"><a href="#"><img src="img/blackdoorshoes.jpg" alt=""></a></div>
+        <div class="sub_subimg"><a href="#"><img src="img/doorshoesfront.jpg" alt=""></a></div>
+        <div class="sub_subimg"><a href="#"><img src="img/allwhite_doorshoes.jpg" alt=""></a></div>
+        
+    
+    </div>
+<!-- 상품 세부사항-->
+        <div id="detail_infor">
+        <h3>상세정보</h3> <br>
+        <hr> <br><br>
+        
+
+        </div>
+
+<!--상품결제정보세부사항-->
+        <div id="prdInfo">
+            <div class="content">
+                <h3>상품결제정보</h3> <br>
+
+                <p>고액결제의 경우 안전을 위해 카드사에서 확인전화를 드릴 수도 있습니다.
+                확인과정에서 도난 카드의 사용이나 타인 명의의 주문등 정상적인 주문이 아니라고 
+                판단될 경우 임의로 주문을 보류 또는 취소할 수 있습니다.  </p> <br>
+                <p>무통장 입금은 상품 구매 대금은 PC뱅킹, 인터넷뱅킹, 텔레뱅킹 혹은 가까운 은행에서 직접 입금하시면 됩니다.  <br>
+                주문시 입력한 입금자명과 실제입금자의 성명이 반드시 일치하여야 하며, 
+                7일 이내로 입금을 하셔야 하며 입금되지 않은 주문은 자동취소 됩니다.</p>
+            </div>
+            
+            <div class="content">
+                <h3>배송정보</h3>
+                <ul>
+                    <li>배송 방법 : 직접배송</li>
+                    <li>배송 지역 : 전국 (제주도 및 도서산간 지역 제외)</li>
+                    <li>배송 비용 : 착불 17,000원 </li>
+                    <li>배송 기간 : 7일 ~ 15일</li>
+                    <li>배송 안내 : -산간벽지나 도서지방은 별도의 추가금액을 지불하셔야 하는 경우가 있습니다. <br>
+                        고객님께서 주문하신 상품은 입금 확인후 배송해 드립니다. 다만, 상품종류에 따라서 상품의 배송이 다소 지연될 수 있습니다.
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="exchange">
+                <h3>교환 및 반품정보</h3>
+                <p><b>교환 및 반품 주소</b> <br>
+                    - [10447] 경기도 고양시 일산동구 백석동 1332-1 레이크하임 518호 
+                </p>
+
+                <p><b>교환 및 반품이 가능한 경우</b> <br>
+                    - 상품을 공급 받으신 날로부터 7일이내 단, 가전제품의 <br>
+  경우 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우에는 교환/반품이 불가능합니다. <br>
+- 공급받으신 상품 및 용역의 내용이 표시.광고 내용과 <br>
+  다르거나 다르게 이행된 경우에는 공급받은 날로부터 3월이내, 그사실을 알게 된 날로부터 30일이내 <br>
+                </p>
+
+                <p><b>교환 및 반품이 불가능한 경우</b> <br>
+                    - 고객님의 책임 있는 사유로 상품등이 멸실 또는 훼손된 경우. 단, 상품의 내용을 확인하기 위하여<br>
+  포장 등을 훼손한 경우는 제외<br>
+- 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우<br>
+(예 : 가전제품, 식품, 음반 등, 단 액정화면이 부착된 노트북, LCD모니터, 디지털 카메라 등의 불량화소에<br>
+따른 반품/교환은 제조사 기준에 따릅니다.)<br>
+- 고객님의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우 단, 화장품등의 경우 시용제품을<br>
+제공한 경우에 한 합니다.<br>
+- 시간의 경과에 의하여 재판매가 곤란할 정도로 상품등의 가치가 현저히 감소한 경우<br>
+- 복제가 가능한 상품등의 포장을 훼손한 경우<br>
+(자세한 내용은 고객만족센터 1:1 E-MAIL상담을 이용해 주시기 바랍니다.)<br>
+<br>
+※ 고객님의 마음이 바뀌어 교환, 반품을 하실 경우 상품반송 비용은 고객님께서 부담하셔야 합니다.<br>
+  (색상 교환, 사이즈 교환 등 포함)
+                </p>
+            </div>
+        </div>
+
+<!--후기내용-->
+        <div id="prdReview">
+            <span class="itemreview">Item Review</span> 
+            <span class="warn">문의글 혹은 악의적인 비방글은 무통보 삭제 될 수 있는점 유의해주세요</span>
+            <div class="customers_rev">
+                <div class="hihi">
+                    <div class="review_photo"><a href="#"><img src="img/review1.jpg" alt=""></a></div>
+                    <div class="review_coment">
+                        <div class="review_title">
+                            <p>
+                                <span class="user_title">조아요조아요조아요조아요</span> <br>
+                                조아요조아요조아요조아요
+                            </p>
+                            <p class="user_Id">스마트****</p>
+                        </div>
+                        <div class="review_sub">
+                            <a href="#"><img src="img/review1.jpg" alt=""></a>
+                            <span><a href="#">레드파인 1000 원목책장 FIF014_C</a></span>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="customers_rev">
+                <div class="hihi">
+                    <div class="review_photo"><a href="#"><img src="img/review2.jpg" alt=""></a></div>
+                    <div class="review_coment">
+                        <div class="review_title">
+                            <p>
+                                <span class="user_title">생각보다 무게감 있어 오히려 안정감 ...</span> <br>
+                                생각보다 무게감 있어 오히려 안정감 있고 좋네요~
+                            </p>
+                            <p class="user_Id">스마트****</p>
+                        </div>
+                        <div class="review_sub">
+                            <a href="#"><img src="img/review2.jpg" alt=""></a>
+                            <span><a href="#">멀바우원목 1200 책장 GRW004_C</a></span>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="customers_rev">
+                <div class="hihi">
+                    <div class="review_photo"><a href="#"><img src="img/review3.jpg" alt=""></a></div>
+                    <div class="review_coment">
+                        <div class="review_title">
+                            <p>
+                                <span class="user_title">배송이이리빠를수가ㅠ 지방이라 ...</span> <br>
+                                배송이이리빠를수가ㅠ 지방이라 지정배송이안되는데 미리갖다주시겠다고 전화 ...
+                            </p>
+                            <p class="user_Id">스마트****</p>
+                        </div>
+                        <div class="review_sub">
+                            <a href="#"><img src="img/review3.jpg" alt=""></a>
+                            <span><a href="#">레드파인 1000 원목책장 FIF014_C</a></span>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="user_review">
+            <ul>
+                <li><a href="#rev_detail">상품상세정보</a></li>
+                <li><a href="#shipping">배송안내</a></li>
+                <li>상품후기</li>
+                <li><a href="#prd_inquiry">상품문의</a></li>
+            </ul>
+            <div  id="review_tablebox">
+                <button>리뷰작성하기</button>
+                <table>                            
+
+                    <tr>
+                    <th>5</th>
+                    <td><a href="#">만족하면서 쓰고있어요.</a></td>
+                    <td>스마트***</td>
+                    <td>2022.02.22</td>
+                    <td>답변완료</td>
+                    </tr>
+
+                    <tr>
+                    <th>4</th>
+                    <td><a href="#">너무 잘 산거같아요</a></td>
+                    <td>스마트***</td>
+                    <td>2022.02.01</td>
+                    <td>답변완료</td>
+                    </tr>
+        
+                    <tr>
+                    <th>3</th>
+                    <td><a href="#">잘 사용하고 있습니다.</a></td>
+                    <td>스마트***</td>
+                    <td>2022.01.24</td>
+                    <td>답변완료</td>
+                    </tr>
+        
+                    <tr>
+                    <th>2</th>
+                    <td><a href="#">빠르게 잘받았습니다.</a></td>
+                    <td>스마트***</td>
+                    <td>2022.01.21</td>
+                    <td>답변완료</td>
+                    </tr>
+        
+                    <tr>
+                    <th>1</th>
+                    <td><a href="#">너무 예뻐요.</a></td>
+                    <td>스마트***</td>
+                    <td>2023.01.15</td>
+                    <td>답변완료</td>
+                    </tr>
+        
+                </table>
+
+            </div>
+
+        </div>
+
+        
+
+        
+
+
+    
+
+    
+    <footer>
+    <div id="infoot">
+        <div id="customoer_center">
+            <h4>CUSTOMER CENTER</h4>
+            <hr>
+            <h2>031-813-0066</h2>
+            <p>
+- 평일 : 10:00 ~ 17:00 (점심시간 12:30 ~ 13:30) <br>
+- 고객센터 운영시간에 순차적으로 답변드리겠습니다. <br>
+- 토요일, 일요일, 공휴일 휴무 <br>
+                <br>
+※ 통화량이 많을때는 문의 게시판으로 문의주세요.<br>
+
+            </p>
+            <div class="cs_menu"><a href="#">문의게시판</a></div>
+            <div class="cs_menu"><a href="#">자주묻는질문</a></div>
+        </div>
+
+        <div id="other_infor">
+            <h4>OTHER INFORMATION</h4>
+            <hr>
+            <p>
+기업은행 377-118268-01-011 (예금주 : (주)블리스데코) <br>
+우리은행 1005-303-808697 (예금주 : (주)블리스데코) <br>
+신한은행 140-012-441221 (예금주 : (주)블리스데코) <br>
+            <div class="don">※ 입금자명 불일치시 자동 입금 확인이 되지않습니다.</div>
+        
+            <p>반품이나 교환시에는 꼭 고객센터로 연락 주시기 바랍니다.</p>
+            </p>
+        </div>
+        
+        <div id="personal_icon">
+            <div class="icon"><a href="#"><img src="img/order.jpg" alt="order"></a>
+            <span><a href="#">주문내역</a></span>
+
+            </div>
+            
+            <div class="icon"><a href="#"><img src="img/profile.jpg" alt="order"></a>
+                <span><a href="#">개인정보</a></span>
+    
+            </div>
+
+            <div class="icon"><a href="#"><img src="img/wishlist.jpg" alt="order"></a>
+                <span><a href="#">관심 상품</a></span>
+    
+            </div>
+
+            <div class="icon"><a href="#"><img src="img/coins.jpg" alt="order"></a>
+                <span><a href="#">적립금</a></span>
+    
+            </div>
+
+            <div class="icon"><a href="#"><img src="img/coupon.jpg" alt="order"></a>
+                <span><a href="#">쿠폰 내역</a></span>
+    
+            </div>
+
+            <div class="icon"><a href="#"><img src="img/pencil.jpg" alt="order"></a>
+                <span><a href="#">내가 쓴 글</a></span>
+    
+            </div>
+        </div>
+        
+    </div>
+    <div id="Inquiry">
+        <ul>
+            <li><a href="#">회사소개</a></li>
+            <li>|</li>
+            <li><a href="#">이용약관</a></li>
+            <li>|</li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li>|</li>
+            <li><a href="#">이용안내</a></li>
+
+        </ul>
+    </div>
+
+    <div id="about_com">
+        <P>
+<span>법인명(상호) : (주)블리스데코 </span> |  <span>대표자(성명) : 서준혁 </span> |  <span>사업자 등록번호 안내 : 649-86-01002 </span><br>
+통신판매업 신고 : 2018-고양일산동-1356 [사업자정보확인]  |  개인정보보호책임자 : 류연승(blissdeco820@naver.com) <br>
+전화 : 031-813-0066  |  팩스 : 031-813-0070  |  주소 : 10447 경기도 고양시 일산동구 백석동 1332-1 레이크하임 518호 <br>
+        </P>
+        <div class="escro_img">
+        <a href="#"><img src="img/escrow_ser.jpg"></a>
+        </div>
+    </div>
+    </footer>
+
+
+</body>
+</html>
